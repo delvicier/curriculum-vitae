@@ -1,0 +1,37 @@
+header {
+  display: grid;
+  grid-template-columns: 90mm 120mm;
+  justify-items: center;
+  align-items: center;
+
+  h2 {
+    margin: 10px 0px;
+    padding: 0;
+  }
+
+  p {
+    margin: 6px 0px;
+    padding: 0;
+  }
+
+  .foto-carnet {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #23282c;
+    img {
+      width: 184px;
+      height: 184px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #515151;
+    }
+  }
+  .info-header {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #595959;
+  }
+}
