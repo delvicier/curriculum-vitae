@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class Home {
   correo: string = 'delvicier@outlook.com';
 
-  bolean = true;
+  bolean: boolean = true;
 
   toggleGallery() {
     this.bolean = !this.bolean;

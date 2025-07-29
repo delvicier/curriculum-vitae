@@ -1,19 +1,20 @@
-<div *ngIf="bolean">
+<div *ngIf="bolean === true">
   <app-gallery>
     <nav
-      style="display: flex; align-items: center; gap: 1rem"
-      onclick="toggleGallery()"
+      style="display: flex; align-items: center; gap: 1rem;"
     >
-      <lucide-icon name="LayoutGrid" [size]="38" color="#fff"></lucide-icon>
+      <button (click)="toggleGallery()" style="cursor: pointer; background: none; border: none;">
+        <lucide-icon name="LayoutGrid" [size]="38" color="#fff"></lucide-icon>
+      </button>
       <p style="font-size: 22px">Portfolio | Sistemas creados</p>
     </nav>
   </app-gallery>
 </div>
 
-<main *ngIf="!bolean" class="main">
+<main *ngIf="bolean === false" class="main">
   <div class="descargar">
     <div class="botones-descargar">
-      <button class="btn-descargar" (click)="print()">
+      <button class="btn-descargar" (click)="toggleGallery()">
         <lucide-icon name="Home" [size]="38" color="#fff"></lucide-icon>
       </button>
       <button class="btn-descargar" (click)="print()">
