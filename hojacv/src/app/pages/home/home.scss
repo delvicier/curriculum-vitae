@@ -1,4 +1,4 @@
-main {
+.main {
   display: grid;
   grid-template-columns: 1fr 210mm 1fr;
   height: 297mm;
@@ -144,8 +144,36 @@ main {
   }
 }
 
+.descargar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  .botones-descargar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 40px;
+    gap: 20px;
+    .btn-descargar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      padding-top: 3px;
+      border-radius: 50%;
+      border: none;
+      background-color: #333;
+      cursor: pointer;
+      &:hover {
+        background-color: #3b3b3b;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
-  main {
+  .main {
     grid-template-columns: 1fr;
     .container-home {
       min-width: 100%;
@@ -157,7 +185,7 @@ main {
 }
 
 @media print {
-  main {
+  .main {
     height: 297mm;
     border: none;
   }

@@ -1,5 +1,26 @@
-<main>
-  <div class="descargar"></div>
+<div *ngIf="bolean">
+  <app-gallery>
+    <nav
+      style="display: flex; align-items: center; gap: 1rem"
+      onclick="toggleGallery()"
+    >
+      <lucide-icon name="LayoutGrid" [size]="38" color="#fff"></lucide-icon>
+      <p style="font-size: 22px">Portfolio | Sistemas creados</p>
+    </nav>
+  </app-gallery>
+</div>
+
+<main *ngIf="!bolean" class="main">
+  <div class="descargar">
+    <div class="botones-descargar">
+      <button class="btn-descargar" (click)="print()">
+        <lucide-icon name="Home" [size]="38" color="#fff"></lucide-icon>
+      </button>
+      <button class="btn-descargar" (click)="print()">
+        <lucide-icon name="Download" [size]="38" color="#fff"></lucide-icon>
+      </button>
+    </div>
+  </div>
   <div class="container-home">
     <div class="body-a4">
       <div class="body-content">
@@ -20,8 +41,11 @@
               ></lucide-icon
               >Sobre mí
             </h2>
-            <p style="text-align: justify;">
-              Soy autodidacta, tengo iniciativa, me gusta aprender cosas nuevas, poseo capacidad organizacional, sé trabajar en equipo y se me da bien la solución de problemas, ya sea mediante la mejora de procedimientos o con la implementación de tecnología.
+            <p style="text-align: justify">
+              Soy autodidacta, tengo iniciativa, me gusta aprender cosas nuevas,
+              poseo capacidad organizacional, sé trabajar en equipo y se me da
+              bien la solución de problemas, ya sea mediante la mejora de
+              procedimientos o con la implementación de tecnología.
             </p>
 
             <h2>
@@ -76,7 +100,12 @@
             <p><strong>Ingles A2</strong>: British Council</p>
 
             <picture>
-              <img src="../../assets/pictures/af0ec446db45eccde026e1e0d66e0f28.png" width="168" alt="qr" />
+              <img
+                onclick="print()"
+                src="../../assets/pictures/af0ec446db45eccde026e1e0d66e0f28.png"
+                width="168"
+                alt="qr"
+              />
             </picture>
           </div>
         </div>
@@ -140,8 +169,8 @@
             </h2>
             <div class="datos-personales">
               <div class="p">
-                <p><Strong>Lina Morales</Strong></p>
-                <p>Celular: 0994166336</p>
+                <p><Strong>Beto Pazmiño</Strong></p>
+                <p>Celular: 0994828797</p>
               </div>
               <div class="p">
                 <p><Strong>Veronica Gutierrez</Strong></p>
@@ -173,18 +202,25 @@
                 />
               </div>
               <div class="btn-galeria">
-                <button><lucide-icon
-                name="ChevronLeft"
-                [size]="32"
-                color="#23282c"
-              ></lucide-icon></button>
-                <button><lucide-icon
-                name="ChevronRight"
-                [size]="32"
-                color="#23282c"
-              ></lucide-icon></button>
+                <button>
+                  <lucide-icon
+                    name="ChevronLeft"
+                    [size]="32"
+                    color="#23282c"
+                  ></lucide-icon>
+                </button>
+                <button>
+                  <lucide-icon
+                    name="ChevronRight"
+                    [size]="32"
+                    color="#23282c"
+                  ></lucide-icon>
+                </button>
               </div>
-              <p style="text-align: center;"><Strong>Galeria completa en: </Strong>https://delvicier.netlify.app</p>
+              <p style="text-align: center">
+                <Strong>Galeria completa en: </Strong
+                >https://delvicier.netlify.app
+              </p>
             </div>
           </div>
         </div>
