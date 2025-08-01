@@ -102,7 +102,7 @@
 
             <picture>
               <img
-                onclick="print()"
+                (click)="toggleGallery()"
                 src="assets/pictures/af0ec446db45eccde026e1e0d66e0f28.png"
                 width="168"
                 alt="qr"
@@ -203,14 +203,14 @@
                 />
               </div>
               <div class="btn-galeria">
-                <button>
+                <button (click)="toggleGallery()">
                   <lucide-icon
                     name="ChevronLeft"
                     [size]="32"
                     color="#23282c"
                   ></lucide-icon>
                 </button>
-                <button>
+                <button (click)="toggleGallery()">
                   <lucide-icon
                     name="ChevronRight"
                     [size]="32"
