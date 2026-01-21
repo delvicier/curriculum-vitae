@@ -3,7 +3,7 @@
     <nav
       style="display: flex; align-items: center; gap: 1rem;"
     >
-      <button (click)="toggleGallery()" style="cursor: pointer; background: none; border: none;">
+      <button (click)="toggleGallery()" style="cursor: pointer; background: none; border: none;" title="btn">
         <lucide-icon name="LayoutGrid" [size]="38" color="#fff"></lucide-icon>
       </button>
       <p style="font-size: 22px">Portfolio | Sistemas creados</p>
@@ -14,10 +14,10 @@
 <main *ngIf="bolean === false" class="main">
   <div class="descargar">
     <div class="botones-descargar">
-      <button class="btn-descargar" (click)="toggleGallery()">
+      <button class="btn-descargar" (click)="toggleGallery()" title="btn">
         <lucide-icon name="Home" [size]="38" color="#fff"></lucide-icon>
       </button>
-      <button class="btn-descargar" (click)="print()">
+      <button class="btn-descargar" (click)="print()" title="btn">
         <lucide-icon name="Download" [size]="38" color="#fff"></lucide-icon>
       </button>
     </div>
@@ -42,7 +42,7 @@
               ></lucide-icon
               >Sobre mí
             </h2>
-            <p style="text-align: justify">
+            <p style="text-align: justify; line-height: 1.4;">
               Soy autodidacta, tengo iniciativa, me gusta aprender cosas nuevas,
               poseo capacidad organizacional, sé trabajar en equipo y se me da
               bien la solución de problemas, ya sea mediante la mejora de
@@ -84,12 +84,13 @@
               ></lucide-icon>
               Habilidades
             </h2>
-            <li>Digitalización de productos</li>
-            <li>Administración de inventario</li>
-            <li>Programación de sistemas</li>
-            <li>Diseño grafico, catalogos</li>
-            <li>Ventas, marketing, redes</li>
-
+            <ul class="habilidades">
+              <li>Desarrollo de Software</li>
+              <li>Automatización de procesos</li>
+              <li>Aplicaciones web y moviles</li>
+              <li>Diseño grafico, catalogos</li>
+              <li>Ventas, marketing, redes</li>
+            </ul>
             <h2>
               <lucide-icon
                 name="Languages"
@@ -122,9 +123,7 @@
               Áreas de conocimientos
             </h2>
             <p>
-              Informatica, automatización de procesos, programación de sistemas
-              de inventario, tecnico de hardware, ventas, diseño,
-              digitalización, catalogos y servicio al cliente.
+              Creación de sistemas informaticos, diseño grafico, diseño web, automatizaciones, digitalización, manejo de servidores Linux, aplicaciones web y moviles, atención al cliente, ventas.
             </p>
             <h2>
               <lucide-icon
@@ -153,11 +152,11 @@
               ></lucide-icon>
               Educación
             </h2>
-            <p><Strong>Bachillerato 2012 - 2015</Strong></p>
+            <p><Strong>Bachillerato | Graduado 2015</Strong></p>
             <p>Unidad Educativa Fiscal 5 de Agosto</p>
-            <p><Strong>Universidad 2016 - 2019</Strong></p>
+            <p><Strong>Universidad 2016 - 2019 | Interrumpido</Strong></p>
             <p>UTPL: Administración de empresas</p>
-            <p><Strong>Tecnologico Universitario 2022 - 2025</Strong></p>
+            <p><Strong>Tecnologico Universitario | Graduado 2025</Strong></p>
             <p>ITI: Desarrollo de Aplicaciones Webs</p>
 
             <h2>
@@ -190,27 +189,27 @@
             <div class="galeria">
               <div class="foto-galeria">
                 <img
-                  src="assets/imgs/Screenshot 2023-10-18 033709.png"
+                  src="assets/imgs/854shots_so.png"
                   alt="portfolio1"
                   width="217"
                   height="152"
                 />
                 <img
-                  src="assets/imgs/Captura de pantalla 2024-07-18 085752.png"
+                  src="assets/imgs/Captura de pantalla 2024-07-18 085506.png"
                   alt="portfolio2"
                   width="217"
                   height="152"
                 />
               </div>
               <div class="btn-galeria">
-                <button (click)="toggleGallery()">
+                <button (click)="toggleGallery()" title="btn">
                   <lucide-icon
                     name="ChevronLeft"
                     [size]="32"
                     color="#23282c"
                   ></lucide-icon>
                 </button>
-                <button (click)="toggleGallery()">
+                <button (click)="toggleGallery()" title="btn">
                   <lucide-icon
                     name="ChevronRight"
                     [size]="32"

@@ -98,7 +98,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px 0px 30px 0px;
+  margin: 20px 0px 20px 0px;
   img {
     width: 184px;
     height: 184px;
@@ -169,6 +169,14 @@
       }
     }
   }
+}
+
+.habilidades{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 25px;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
