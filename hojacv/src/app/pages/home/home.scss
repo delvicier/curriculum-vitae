@@ -110,6 +110,7 @@
 
 .galeria {
   height: 70mm;
+  margin-top: 5px;
   .foto-galeria {
     display: flex;
     gap: 10px;
@@ -196,19 +197,23 @@
 
 @media print {
   .main {
-    height: 297mm;
+    height: 295mm;
     border: none;
+        margin: 0 !important;
+    padding: 0 !important;
   }
   html,
   body {
     margin: 0 !important;
     padding: 0 !important;
     width: 210mm !important;
-    height: 297mm !important;
+    height: 295mm !important;
     overflow: hidden !important;
   }
   .body-a4 {
     display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
     position: absolute;
     left: 0;
     top: 0;
