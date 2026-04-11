@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background: linear-gradient(-45deg, #0b0c10, #12141a, #1f143d, #0b0c10);
+  background: linear-gradient(-45deg, #0b0c10, #12141a, #0a0516, #0b0c10);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   color: #ffffff;
@@ -26,7 +26,7 @@ body {
 }
 
 .glass-card {
-  background: rgba(18, 20, 26, 0.6);
+  background: rgba(11, 12, 16, 0.6);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -38,7 +38,7 @@ body {
 }
 
 .glass-card:hover {
-  background: rgba(26, 28, 35, 0.8);
+  background: rgba(15, 16, 20, 0.8);
   border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -54,9 +54,9 @@ body {
   background: #8b5cf6;
   filter: blur(60px);
   z-index: 0;
-  opacity: 0.12;
+  opacity: 0.36;
   pointer-events: none;
-}
+} 
 
 .glass-card > * {
   position: relative;
@@ -73,7 +73,7 @@ body {
 }
 
 .glass-pill:hover {
-  background: rgba(26, 28, 35, 0.8);
+  background: rgba(15, 16, 20, 0.8);
   border-color: rgba(139, 92, 246, 0.4);
   box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
 }
@@ -81,8 +81,154 @@ body {
 .icon-wrapper {
   background: #1f143d;
   color: #8b5cf6;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.glass-card2 {
+  background: rgba(11, 12, 16, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.glass-card2:hover {
+  background: rgba(15, 16, 20, 0.8);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Left glow effect */
+.glass-card2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(99%);
+  right: -40px;
+  width: 60px;
+  height: 50%;
+  background: #8b5cf6;
+  filter: blur(60px);
+  z-index: 0;
+  opacity: 0.36;
+  pointer-events: none;
+} 
+
+.glass-card2 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.glass-pill2 {
+  background: rgba(11, 13, 19, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(135, 65, 255, 0.058);
+  border-radius: 25px;
+  transition: all 0.25s ease;
+}
+
+.glass-pill2:hover {
+  background: rgba(8, 8, 10, 0.8);
+  border-color: rgba(123, 69, 248, 0.4);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+}
+
+.glass-pill2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -40px;
+  width: 60px;
+  height: 50%;
+  background: #8b5cf6;
+  filter: blur(60px);
+  z-index: 0;
+  opacity: 0.36;
+  pointer-events: none;
+} 
+
+.icon-wrapper2 {
+  background: #1f143d;
+  color: #8b5cf6;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.glass-card3 {
+  background: rgba(11, 12, 16, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.glass-card3:hover {
+  background: rgba(15, 16, 20, 0.8);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Left glow effect */
+.glass-card3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(99%);
+  right: -40px;
+  width: 60px;
+  height: 50%;
+  background: #8b5cf6;
+  filter: blur(60px);
+  z-index: 0;
+  opacity: 0.36;
+  pointer-events: none;
+} 
+
+.glass-card3 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.glass-pill3 {
+  background: rgba(11, 13, 19, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(135, 65, 255, 0.058);
+  border-radius: 25px;
+  transition: all 0.25s ease;
+}
+
+.glass-pill3:hover {
+  background: rgba(8, 8, 10, 0.8);
+  border-color: rgba(123, 69, 248, 0.4);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+}
+
+.glass-pill3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -40px;
+  width: 60px;
+  height: 50%;
+  background: #8b5cf6;
+  filter: blur(60px);
+  z-index: 0;
+  opacity: 0.36;
+  pointer-events: none;
+} 
