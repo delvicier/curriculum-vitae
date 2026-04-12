@@ -6,6 +6,14 @@ import {MatIconModule} from '@angular/material/icon';
   selector: 'app-root',
   imports: [MatIconModule],
   template: `
+
+  <div class="fondo-animado-vercel">
+  <div class="glow-blob blob-1"></div>
+  <div class="glow-blob blob-2"></div>
+  <div class="glow-blob blob-3"></div>
+  </div>
+
+  <div class="tu-contenedor-existente">
     <div class="max-w-3xl mx-auto px-6 py-12 md:py-20 flex flex-col gap-16 md:gap-12">
       
       <!-- Section 1: Hero -->
@@ -17,7 +25,7 @@ import {MatIconModule} from '@angular/material/icon';
         
         <div class="space-y-2">
           <h1 class="font-display text-4xl md:text-5xl font-bold tracking-tight text-white">
-            Me presento <br/>
+            Programador <br/>
             <span class="text-transparent bg-clip-text bg-linear-to-r from-[#5322ce] to-[#6b3ade]">Christopher Delvicier</span>
           </h1>
           <p class="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#b4b6c3] uppercase mt-4">
@@ -151,7 +159,7 @@ import {MatIconModule} from '@angular/material/icon';
                 </div>
               </a>
               
-              <a href="tel:+1234567890" class="flex items-center gap-4 py-3 px-4 glass-card3 transition-all group">
+              <a href="https://wa.me/593999584131" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 py-3 px-4 glass-card3 transition-all group">
                 <div class="icon-wrapper w-10 h-10 shrink-0 group-hover:scale-110 transition-transform">
                   <mat-icon class="text-[20px] w-5 h-5">phone</mat-icon>
                 </div>
@@ -178,10 +186,12 @@ import {MatIconModule} from '@angular/material/icon';
         </div>
       </section>
       
-      <footer class="pt-4 text-center">
+      <footer class="pt-2 text-center">
         <p class="text-xs text-[#9496a8]">&copy; 2026 Christopher Delvicier. All rights reserved.</p>
       </footer>
     </div>
+  </div>
+    
   `,
 })
 export class App {
@@ -205,15 +215,57 @@ export class App {
       title: 'Moodle React',
       type: 'React',
       link: 'https://delvicier.github.io/',
-      description: 'Plataforma educativa con creador de paginas, examenes y foros. Integraciones con inteligencia artificial (Ollama).',
-      image: '/edu-react.png'
+      description: 'Aula virtual con creador de paginas, examenes, tareas y foros asistidos por inteligencia artificial local (Ollama).',
+      image: 'https://lovable.dev/content/news/covers/react-brand-post.png'
     },
     {
-      title: 'ASK Angular',
+      title: 'Store Angular',
       type: 'Angular',
       link: 'https://asksupernick.netlify.app/',
-      description: 'Digitalización de preguntas de examen mediante OCR local y gestión de archivos con indexeddb.',
-      image: '/edu-angular.png'
-    }
+      description: 'Plataforma web movile tienda informatica con generador de catalogos digitales en formato A4 PDF.',
+      image: 'https://miro.medium.com/1*FqNPqslt0wc985iUWowLVQ.png'
+    },
+    {
+      title: 'Backend NestJS',
+      type: 'NestJS',
+      link: 'https://delvicier.github.io/',
+      description: 'Gestor de archivos multimedia, Web Socket y persistencia de datos con Postgresql y Redis.',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiYblbGA0CioXw_L_FaD5OPXA09_a263hTsw&s'
+    },
+    {
+      title: 'Backend Sprint Boot',
+      type: 'Sprint',
+      link: 'https://asksupernick.netlify.app/',
+      description: 'Facturación electrónica, firma y envio de documentos xml, envio de comprobantes, gestión de inventario.',
+      image: 'https://res.cloudinary.com/dx2orqjv8/images/f_webp,q_auto:best/v1693496622/blog/Featured-4/Featured-4.png?_i=AA'
+    },
+    {
+      title: 'E-Commerce PHP',
+      type: 'Laravel',
+      link: 'https://delvicier.github.io/',
+      description: 'Plataforma de comercio electrónico, de tienda fisica a digital con integración a pasarela de pago.',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfBz081b3NyUYlOhYItosdQrFccxx_bY_k6A&s'
+    },
+    {
+      title: 'Chatbot Python',
+      type: 'Python',
+      link: 'https://asksupernick.netlify.app/',
+      description: 'Chatbot, digitalización de documentos, visión artificial, OCR, arquitectura RAG, embeddings, LLMs (IA).',
+      image: 'https://cdn-media.sforum.vn/storage/app/media/mylinh/cac-kieu-du-lieu-trong-python-thumbnail.jpg'
+    },
+    {
+      title: 'Movil React Native',
+      type: 'Android iOS',
+      link: 'https://delvicier.github.io/',
+      description: 'Revisión y digitalización de examenes.',
+      image: 'https://i0.wp.com/pigmalion.co/wp-content/uploads/2025/08/React-Native.png'
+    },
+    {
+      title: 'Movil Jetpack Compose',
+      type: 'Android',
+      link: 'https://asksupernick.netlify.app/',
+      description: 'Gestor de Equipos, soporte técnico.',
+      image: 'https://cdn.prod.website-files.com/6706802514ffa549d0bf0b8a/675d977952e5d77d506b8b20_Jetpack-vs.-XML-1.webp'
+    },
   ];
 }
