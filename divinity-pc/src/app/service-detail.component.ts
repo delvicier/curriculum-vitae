@@ -12,7 +12,7 @@ import { PricingComponent } from './pricing.component';
     @if (service()) {
       <div class="pt-24 pb-12 px-4 max-w-5xl mx-auto relative z-10">
         <a routerLink="/" class="inline-flex items-center gap-2 text-brand-blue hover:text-brand-blue-hover mb-8 transition-colors font-medium">
-          <mat-icon class="text-[18px] w-[18px] h-[18px]">arrow_back</mat-icon> Volver al inicio
+          <mat-icon class="text-[18px] w-4.5 h-4.5">arrow_back</mat-icon> Volver al inicio
         </a>
         
         <div class="flex items-center gap-4 mb-6">
@@ -38,7 +38,7 @@ import { PricingComponent } from './pricing.component';
           }
         </div>
 
-        <div class="bg-[#060b14] border border-brand-border/50 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
+        <div class="bg-brand-dark border border-brand-border/50 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
           <div class="absolute inset-0 futuristic-bg animate-gradient opacity-30 z-0"></div>
           <div class="relative z-10">
             <h2 class="text-2xl font-bold mb-6">¿Por qué elegirnos para este servicio?</h2>
@@ -61,7 +61,6 @@ import { PricingComponent } from './pricing.component';
 export class ServiceDetailComponent {
   route = inject(ActivatedRoute);
   
-  // Get the 'id' param from the route
   idParam = toSignal(this.route.paramMap);
   
   service = computed(() => {

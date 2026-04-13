@@ -5,16 +5,20 @@ import { MatIconModule } from '@angular/material/icon';
   selector: 'app-pricing',
   imports: [MatIconModule],
   template: `
-    <section id="planes" class="py-24 px-4 max-w-[90rem] mx-auto">
-      <div class="text-center mb-16">
+    <section id="planes" class="pt-16 pb-0 px-4 max-w-460 mx-auto">
+      <div class="text-center mb-16 ">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Planes y Servicios</h2>
         <p class="text-gray-400">Selecciona el servicio que necesitas para empezar</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-center">
-        <!-- Tier 1: Web -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 items-center m-auto">
+        <!-- Tier 1: Web --> 
         <div (click)="activePlan.set('web')"
-             class="bg-brand-card rounded-2xl p-8 flex flex-col transition-all duration-300 cursor-pointer relative"
+             (keydown.enter)="activePlan.set('web')"
+             (keydown.space)="activePlan.set('web')"
+             tabindex="0"
+             role="button"
+             class="bg-brand-card rounded-4xl p-8 flex flex-col transition-all duration-300 cursor-pointer relative outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
              [class.border-2]="activePlan() === 'web'"
              [class.border-brand-blue]="activePlan() === 'web'"
              [class.border]="activePlan() !== 'web'"
@@ -30,26 +34,26 @@ import { MatIconModule } from '@angular/material/icon';
               Seleccionado
             </div>
           }
+ 
 
-          <div class="flex justify-between items-center mb-4">
-            <span class="text-xs font-semibold px-3 py-1 rounded-full"
-                  [class.bg-brand-blue/20]="activePlan() === 'web'"
-                  [class.text-brand-blue]="activePlan() === 'web'"
-                  [class.bg-gray-800]="activePlan() !== 'web'"
-                  [class.text-gray-300]="activePlan() !== 'web'">Presencia Digital</span>
+          <div class="flex justify-between items-center mb-6">
+            <span class="text-[24px] font-bold">Web </span>
+            <span class="text-[14px] font-semibold px-3 py-1.5 rounded-full"
+              [class.bg-brand-blue/20]="activePlan() === 'web'"
+              [class.text-brand-blue]="activePlan() === 'web'"
+              [class.bg-gray-800]="activePlan() !== 'web'"
+              [class.text-gray-300]="activePlan() !== 'web'">Desde $20</span>
           </div>
-          <div class="mb-6">
-            <span class="text-4xl font-bold">Web</span>
-          </div>
-          <p class="text-sm text-gray-400 mb-8 flex-grow">Ideal para negocios que empiezan y necesitan visibilidad.</p>
+          <p class="text-sm text-gray-400 mb-8 grow">Ideal para empezar y aumentar tu visibilidad.</p>
           
           <ul class="space-y-4 mb-8 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-[18px] h-[18px]">check_circle</mat-icon> Landing Page o Web</li>
-            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-[18px] h-[18px]">check_circle</mat-icon> Diseño Responsive</li>
-            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-[18px] h-[18px]">check_circle</mat-icon> Formulario de contacto</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Landing Page o Web</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Posiciona tu marca o negocio</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Da a conocer tus servicios</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Diseño responsivo </li>
           </ul>
           <button (click)="openWhatsApp('Desarrollo Web', $event)"
-                  class="w-full py-2.5 rounded-lg font-medium transition-colors mt-auto flex items-center justify-center gap-2"
+                  class="w-full py-2.5 rounded-3xl font-medium transition-colors mt-auto flex items-center justify-center gap-2"
                   [class.bg-brand-blue]="activePlan() === 'web'"
                   [class.text-white]="activePlan() === 'web'"
                   [class.hover:bg-brand-blue-hover]="activePlan() === 'web'"
@@ -57,13 +61,16 @@ import { MatIconModule } from '@angular/material/icon';
                   [class.border]="activePlan() !== 'web'"
                   [class.border-gray-700]="activePlan() !== 'web'"
                   [class.hover:bg-gray-800]="activePlan() !== 'web'">
-            Cotizar Web <mat-icon class="text-[18px] w-[18px] h-[18px]">chat</mat-icon>
+            Cotizar Web<mat-icon class="text-[18px] w-4.5 h-4.5">chat</mat-icon>
           </button>
         </div>
 
-        <!-- Tier 2: E-commerce -->
         <div (click)="activePlan.set('ecommerce')"
-             class="bg-brand-card rounded-2xl p-8 flex flex-col transition-all duration-300 cursor-pointer relative"
+             (keydown.enter)="activePlan.set('ecommerce')"
+             (keydown.space)="activePlan.set('ecommerce')"
+             tabindex="0"
+             role="button"
+             class="bg-brand-card rounded-4xl p-8 flex flex-col transition-all duration-300 cursor-pointer relative outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
              [class.border-2]="activePlan() === 'ecommerce'"
              [class.border-brand-blue]="activePlan() === 'ecommerce'"
              [class.border]="activePlan() !== 'ecommerce'"
@@ -80,25 +87,24 @@ import { MatIconModule } from '@angular/material/icon';
             </div>
           }
 
-          <div class="flex justify-between items-center mb-4">
-            <span class="text-xs font-semibold px-3 py-1 rounded-full"
+          <div class="flex justify-between items-center mb-6">
+            <span class="text-[24px] font-bold">E-commerce</span>
+            <span class="text-[14px] font-semibold px-3 py-1.5 rounded-full"
                   [class.bg-brand-blue/20]="activePlan() === 'ecommerce'"
                   [class.text-brand-blue]="activePlan() === 'ecommerce'"
                   [class.bg-gray-800]="activePlan() !== 'ecommerce'"
-                  [class.text-gray-300]="activePlan() !== 'ecommerce'">Ventas Online</span>
-          </div>
-          <div class="mb-6">
-            <span class="text-4xl font-bold">E-commerce</span>
-          </div>
-          <p class="text-sm text-gray-400 mb-8 flex-grow">Para tiendas que quieren vender 24/7 de forma automatizada.</p>
+                  [class.text-gray-300]="activePlan() !== 'ecommerce'">Desde $70 </span>
+          </div> 
+          <p class="text-sm text-gray-400 mb-8 grow">Vuelve tu tienda fisica en digital.</p>
           
           <ul class="space-y-4 mb-8 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-[18px] h-[18px]">check_circle</mat-icon> Todo lo de Presencia Digital</li>
-            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-[18px] h-[18px]">check_circle</mat-icon> Catálogo de productos</li>
-            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-[18px] h-[18px]">check_circle</mat-icon> Pasarela de pagos</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Venta de tus servicios</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Catálogo de productos</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Recibir y gestionar pedidos</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Pasarela de pagos online</li>
           </ul>
           <button (click)="openWhatsApp('E-commerce', $event)"
-                  class="w-full py-2.5 rounded-lg font-medium transition-colors mt-auto flex items-center justify-center gap-2"
+                  class="w-full py-2.5 rounded-3xl font-medium transition-colors mt-auto flex items-center justify-center gap-2"
                   [class.bg-brand-blue]="activePlan() === 'ecommerce'"
                   [class.text-white]="activePlan() === 'ecommerce'"
                   [class.hover:bg-brand-blue-hover]="activePlan() === 'ecommerce'"
@@ -106,13 +112,16 @@ import { MatIconModule } from '@angular/material/icon';
                   [class.border]="activePlan() !== 'ecommerce'"
                   [class.border-gray-700]="activePlan() !== 'ecommerce'"
                   [class.hover:bg-gray-800]="activePlan() !== 'ecommerce'">
-            Cotizar E-commerce <mat-icon class="text-[18px] w-[18px] h-[18px]">chat</mat-icon>
+            Cotizar E-commerce <mat-icon class="text-[18px] w-4.5 h-4.5">chat</mat-icon>
           </button>
         </div>
 
-        <!-- Tier 3: Apps -->
         <div (click)="activePlan.set('apps')"
-             class="bg-brand-card rounded-2xl p-8 flex flex-col transition-all duration-300 cursor-pointer relative"
+             (keydown.enter)="activePlan.set('apps')"
+             (keydown.space)="activePlan.set('apps')"
+             tabindex="0"
+             role="button"
+             class="bg-brand-card rounded-4xl p-8 flex flex-col transition-all duration-300 cursor-pointer relative outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
              [class.border-2]="activePlan() === 'apps'"
              [class.border-brand-blue]="activePlan() === 'apps'"
              [class.border]="activePlan() !== 'apps'"
@@ -129,25 +138,24 @@ import { MatIconModule } from '@angular/material/icon';
             </div>
           }
 
-          <div class="flex justify-between items-center mb-4">
-            <span class="text-xs font-semibold px-3 py-1 rounded-full"
+          <div class="flex justify-between items-center mb-6">
+            <span class="text-[24px] font-bold">Apps</span>
+            <span class="text-[14px] font-semibold px-3 py-1.5 rounded-full"
                   [class.bg-brand-blue/20]="activePlan() === 'apps'"
                   [class.text-brand-blue]="activePlan() === 'apps'"
                   [class.bg-gray-800]="activePlan() !== 'apps'"
-                  [class.text-gray-300]="activePlan() !== 'apps'">Solución Total</span>
-          </div>
-          <div class="mb-6">
-            <span class="text-4xl font-bold">App + Web</span>
-          </div>
-          <p class="text-sm text-gray-400 mb-8 flex-grow">Plataformas complejas y gestión a medida.</p>
+                  [class.text-gray-300]="activePlan() !== 'apps'">Desde $80</span>
+          </div> 
+          <p class="text-sm text-gray-400 mb-8 grow">Apps para tu celular o computador.</p>
           
           <ul class="space-y-4 mb-8 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-[18px] h-[18px]">check_circle</mat-icon> App Móvil / Escritorio</li>
-            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-[18px] h-[18px]">check_circle</mat-icon> Panel de Administración</li>
-            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-[18px] h-[18px]">check_circle</mat-icon> Sincronización en tiempo real</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> App Móvil / Android & Mac</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> App Desktop / Windows & Mac</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Integración local o externa (nube)</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Facil instalación y gestión</li>
           </ul>
           <button (click)="openWhatsApp('Aplicación a Medida', $event)"
-                  class="w-full py-2.5 rounded-lg font-medium transition-colors mt-auto flex items-center justify-center gap-2"
+                  class="w-full py-2.5 rounded-3xl font-medium transition-colors mt-auto flex items-center justify-center gap-2"
                   [class.bg-brand-blue]="activePlan() === 'apps'"
                   [class.text-white]="activePlan() === 'apps'"
                   [class.hover:bg-brand-blue-hover]="activePlan() === 'apps'"
@@ -155,13 +163,16 @@ import { MatIconModule } from '@angular/material/icon';
                   [class.border]="activePlan() !== 'apps'"
                   [class.border-gray-700]="activePlan() !== 'apps'"
                   [class.hover:bg-gray-800]="activePlan() !== 'apps'">
-            Cotizar App <mat-icon class="text-[18px] w-[18px] h-[18px]">chat</mat-icon>
+            Cotizar App <mat-icon class="text-[18px] w-4.5 h-4.5">chat</mat-icon>
           </button>
         </div>
 
-        <!-- Tier 4: IA & Automatización -->
         <div (click)="activePlan.set('ia')"
-             class="bg-brand-card rounded-2xl p-8 flex flex-col transition-all duration-300 cursor-pointer relative"
+             (keydown.enter)="activePlan.set('ia')"
+             (keydown.space)="activePlan.set('ia')"
+             tabindex="0"
+             role="button"
+             class="bg-brand-card rounded-4xl p-8 flex flex-col transition-all duration-300 cursor-pointer relative outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
              [class.border-2]="activePlan() === 'ia'"
              [class.border-brand-blue]="activePlan() === 'ia'"
              [class.border]="activePlan() !== 'ia'"
@@ -179,24 +190,24 @@ import { MatIconModule } from '@angular/material/icon';
           }
 
           <div class="flex justify-between items-center mb-4">
-            <span class="text-xs font-semibold px-3 py-1 rounded-full"
+            <span class="text-[24px] font-bold">Automatizar</span>
+            <span class="text-[14px] font-semibold px-3 py-1.5 rounded-full"
                   [class.bg-brand-blue/20]="activePlan() === 'ia'"
                   [class.text-brand-blue]="activePlan() === 'ia'"
                   [class.bg-gray-800]="activePlan() !== 'ia'"
-                  [class.text-gray-300]="activePlan() !== 'ia'">Transformación</span>
+                  [class.text-gray-300]="activePlan() !== 'ia'">Desde $90 </span>
           </div>
-          <div class="mb-6">
-            <span class="text-4xl font-bold">Automatización</span>
-          </div>
-          <p class="text-sm text-gray-400 mb-8 flex-grow">Digitalización de procesos, IA y aparatos inteligentes.</p>
+
+          <p class="text-sm text-gray-400 mb-8 grow">Digitalización de procesos, Integrar IA.</p>
           
           <ul class="space-y-4 mb-8 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-[18px] h-[18px]">check_circle</mat-icon> Chatbots y Agentes IA</li>
-            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-[18px] h-[18px]">check_circle</mat-icon> Integración de sistemas (IoT)</li>
-            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-[18px] h-[18px]">check_circle</mat-icon> Automatización de flujos</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Chatbots y Agentes IA</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Integración de sistemas (IoT)</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Visión artificial (camaras de seguridad)</li>
+            <li class="flex items-center gap-2"><mat-icon class="text-brand-blue text-[18px] w-4.5 h-4.5">check_circle</mat-icon> Automatización de flujos</li>
           </ul>
           <button (click)="openWhatsApp('Automatización e IA', $event)"
-                  class="w-full py-2.5 rounded-lg font-medium transition-colors mt-auto flex items-center justify-center gap-2"
+                  class="w-full py-2.5 rounded-3xl font-medium transition-colors mt-auto flex items-center justify-center gap-2"
                   [class.bg-brand-blue]="activePlan() === 'ia'"
                   [class.text-white]="activePlan() === 'ia'"
                   [class.hover:bg-brand-blue-hover]="activePlan() === 'ia'"
@@ -204,7 +215,7 @@ import { MatIconModule } from '@angular/material/icon';
                   [class.border]="activePlan() !== 'ia'"
                   [class.border-gray-700]="activePlan() !== 'ia'"
                   [class.hover:bg-gray-800]="activePlan() !== 'ia'">
-            Agendar Consultoría <mat-icon class="text-[18px] w-[18px] h-[18px]">chat</mat-icon>
+            Agendar Consultoría <mat-icon class="text-[18px] w-4.5 h-4.5">chat</mat-icon>
           </button>
         </div>
       </div>
@@ -225,8 +236,8 @@ export class PricingComponent {
   }
 
   openWhatsApp(planName: string, event: Event) {
-    event.stopPropagation(); // Prevent card click from firing
-    const phoneNumber = '593999999999'; // Replace with actual number
+    event.stopPropagation(); 
+    const phoneNumber = '593999584131'; 
     const message = encodeURIComponent(`Hola Divinity PC, estoy interesado en el servicio de ${planName}. ¿Podrían darme más información?`);
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   }
