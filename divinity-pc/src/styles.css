@@ -35,12 +35,12 @@ body {
 }
 
 .animate-gradient {
-  animation: gradient 15s ease infinite;
+  animation: gradient 30s ease infinite;
   background-size: 400% 400%;
 }
 
 .futuristic-bg {
-  background-image: linear-gradient(-45deg, #060b14, #0a1930, #02040a, #0f1523);
+  background-image: linear-gradient(-45deg, #070c1a, #030815, #040712, #0d111d);
 }
 
 .bg-grid-pattern {

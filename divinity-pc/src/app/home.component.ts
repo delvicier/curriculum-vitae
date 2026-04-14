@@ -8,8 +8,9 @@ import { PricingComponent } from './pricing.component';
   imports: [MatIconModule, RouterLink, PricingComponent],
   template: `
     <!-- Hero Section -->
-    <section class="pt-16 pb-0 px-4 text-center max-w-5xl mx-auto relative z-10">
-      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+    <section class="pt-8 pb-0 px-4 text-center max-w-5xl mx-auto relative z-10 bg-grid-pattern animate-gradient">
+      <img class="flex m-auto" src="https://emprendimiento.ai/wp-content/uploads/2025/03/img_curso_v3.png" alt="transforma">
+      <h1 class="text-5xl pt-8 md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
         Transforma tu negocio con <br class="hidden md:block"/>
         <span class="text-brand-blue">Desarrollo a Medida</span>
       </h1>
@@ -18,9 +19,9 @@ import { PricingComponent } from './pricing.component';
       </p>
       
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-        <button class="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue-hover text-white px-8 py-3.5 rounded-3xl font-medium transition-colors flex items-center justify-center gap-2 text-lg">
-          Cotizar un proyecto <mat-icon>rocket_launch</mat-icon>
-        </button>
+        <a routerLink="/" fragment="planes" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue-hover text-white px-8 py-3.5 rounded-3xl font-medium transition-colors flex items-center justify-center gap-2 text-lg">
+          Transforma tu negocio <mat-icon>rocket_launch</mat-icon>
+        </a>
       </div>
 
       <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-gray-400 text-sm font-medium border-t border-brand-border pt-8">
@@ -37,17 +38,17 @@ import { PricingComponent } from './pricing.component';
     </section>
 
     <!-- Features Section -->
-    <section id="servicios" class="py-16 relative border-y border-brand-border/50 mt-8">
+    <section id="servicios" class="py-12 relative border-y border-brand-border/50 mt-8">
       <!-- Animated Futuristic Background -->
-      <div class="absolute inset-0 futuristic-bg animate-gradient z-0"></div>
+      <div class="absolute inset-0 z-0"></div>
       <div class="absolute inset-0 bg-grid-pattern z-0 mask-image-fade"></div>
       
       <div class="max-w-7xl mx-auto px-4 relative z-10">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Servicios</h2>
+        <div class="text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12">Servicios</h2>
         </div>
 
-        <div class=" w-4xl grid grid-cols-1 md:grid-cols-2 m-auto gap-8">
+        <div class=" max-w-4xl grid grid-cols-1 md:grid-cols-2 m-auto gap-8">
           <!-- Card 1 -->
           <div class="bg-brand-card/80 backdrop-blur-md border border-brand-border rounded-3xl p-6 flex flex-col hover:border-brand-blue/50 transition-colors group shadow-lg">
             <div class="flex items-center gap-3 mb-4">
@@ -59,7 +60,7 @@ import { PricingComponent } from './pricing.component';
             </p>
             
             <!-- Mock UI inside card -->
-            <div class="bg-brand-dark rounded-2xl px-6 py-8 border border-brand-border/50 relative overflow-hidden group-hover:border-brand-blue/30 transition-colors mb-6">
+            <div class="bg-brand-dark rounded-2xl px-6 py-10 border border-brand-border/50 relative overflow-hidden group-hover:border-brand-blue/30 transition-colors mb-6">
               <div class="flex items-center justify-between mb-3">
                 <div class="h-2 w-16 bg-gray-700 rounded"></div>
                 <div class="h-2 w-8 bg-brand-blue rounded"></div>

@@ -39,7 +39,7 @@ import { MatIconModule } from '@angular/material/icon';
       </main>
 
       <!-- Footer -->
-      <footer class="border-t border-brand-border mt-20 py-12">
+      <footer class="border-t border-brand-border mt-12 py-12">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-4">
           <p class="text-gray-500 text-sm">© 2026 Divinity PC. Todos los derechos reservados.</p> 
         </div>
